@@ -17,3 +17,6 @@ to do:
 - Do textures
 - Anything special? or just replacement.
 [/list]
+
+semos road map picture:
+![alt text](https://cdn.discordapp.com/attachments/633981723918598165/634050692876730379/unknown.png "semos roadmap")
