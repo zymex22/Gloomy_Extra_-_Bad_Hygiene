@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			 <operations>
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="WaterTowerS"]/graphicData</xpath>
+					<value>
+							<graphicData>
+								<texPath>Things/Building/Hygiene/GloomyWaterTowerS</texPath>
+								<graphicClass>Graphic_Single</graphicClass> 
+								<shaderType>CutoutComplex</shaderType>
+								<drawSize>(2,4)</drawSize>
+								<damageData>
+									<rect>(0.05,0.05,0.95,0.95)</rect>
+								</damageData>
+							</graphicData>
+					</value>
+				</li>
+
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="WaterTowerS"]/stuffCategories</xpath>
+					<value>
+							<stuffCategories>
+								<li>Woody</li>
+							</stuffCategories>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

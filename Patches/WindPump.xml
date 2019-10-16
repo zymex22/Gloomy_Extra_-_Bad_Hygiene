@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="WindPump"]/graphicData</xpath>
+					<value>
+							<graphicData>
+								<texPath>Things/Building/Hygiene/GloomyWindPump</texPath>
+								<graphicClass>Graphic_Single</graphicClass> 
+								<shaderType>CutoutComplex</shaderType>
+								<drawSize>(2,2)</drawSize>
+								<shadowData>
+									<volume>(0.6, 1.0, 1.6)</volume>
+									<offset>(-0.1,0,-0.08)</offset>
+								</shadowData>
+							</graphicData>
+					</value>
+				</li>
+				<li Class="PatchOperationConditional">
+					<xpath>*/ThingDef[defName="WindPump"]/stuffCategories</xpath>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>*/ThingDef[defName="WindPump"]</xpath>
+								<value>
+									<costStuffCount>20</costStuffCount>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>*/ThingDef[defName="WindPump"]</xpath>
+								<value>
+									<stuffCategories>
+										<li>Woody</li>
+									</stuffCategories>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>*/ThingDef[defName="WindPump"]/costList</xpath>
+								<value>
+									<costList>
+										<Steel>40</Steel>
+										<ComponentIndustrial>2</ComponentIndustrial>
+									</costList>
+								</value>
+							</li>
+						</operations>
+					</nomatch>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+ 

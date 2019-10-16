@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAttributeSet">
+					<xpath>/Defs/ThingDef[@ParentName="SMSinkBase"]</xpath>
+					<attribute>ParentName</attribute>
+					<value>DubsDirtyBasinBase</value>
+				</li>
+				
+				<!-- <li Class="PatchOperationAdd"> -->
+				<!-- <xpath>*/ThingDef[defName="SM_Sink"]</xpath> -->
+					<!-- <value> -->
+							<!-- <thingClass>DubsBadHygiene.Building_basin</thingClass> -->
+							<!-- <hasInteractionCell>True</hasInteractionCell> -->
+							<!-- <interactionCellIcon>DiningChair</interactionCellIcon> -->
+							<!-- <interactionCellOffset>(0,0,-1)</interactionCellOffset> -->
+					<!-- </value> -->
+				<!-- </li> -->
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+ 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Dubs Bad Hygiene</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="WashBucket"]/graphicData</xpath>
+					<value>
+							<graphicData>
+								<texPath>Things/Building/Hygiene/NewWashBucket</texPath>
+								<graphicClass>Graphic_Single</graphicClass> 
+								<shaderType>CutoutComplex</shaderType>
+								<drawSize>(2,2)</drawSize>
+								<damageData>
+									<rect>(0.2,0.2,0.6,0.6)</rect>
+								</damageData>
+							</graphicData>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>*/ThingDef[defName="WashBucket"]/stuffCategories</xpath>
+					<value>
+								<stuffCategories>
+									<li>Woody</li>
+								</stuffCategories>
+					</value>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>*/ThingDef[defName="WashBucket"]</xpath>
+					<value>
+								<size>(1,1)</size>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
+ 
